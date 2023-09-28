@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <title>Resume Builder</title>
+</head>
+<body>
+    <header class="header">
+        <h1>RESUME BUILDER</h1>
+    </header>
+    <form id="resumeForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <div class="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <label for="projectName">Project Name:</label>
+                <input type="text" class="projectName" name="projectName" required><br>
+        
+                <label for="projectDescription">Description:</label>
+                <textarea class="projectDescription" name="projectDescription" rows="3" required></textarea><br>
+        
+                <label for="technologiesUsed">Technologies Used:</label>
+                <input type="text" class="technologiesUsed" name="technologiesUsed" required><br>
+            </div>
+        
+            <button type="button" id="addProjectButton">Add Another Project</button>
+        </div>
+
+        <h2>Experience Details</h2>
+        <div class="experience">
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" required><br>
+
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation" name="designation" required><br>
+
+            <label for="years">Years of Experience:</label>
+            <input type="number" id="years" name="years" required><br>
+        </div>
+
+        <h2>Education Details</h2>
+        <div class="education">
+            <label for="school">10th School Name:</label>
+            <input type="text" id="school" name="school" required><br>
+
+            <label for="schoolPercentage">Percentage:</label>
+            <input type="number" step="0.01" id="schoolPercentage" name="schoolPercentage" required><br>
+
+            <label for="college">College Name:</label>
+            <input type="text" id="college" name="college" required><br>
+
+            <label for="collegePercentage">CGPA:</label>
+            <input type="number" step="0.01" id="collegePercentage" name="collegePercentage" required><br>
+        </div>
+
+        <h2>Skills</h2>
+        <label for="skills">Separate each skill with coma</label>
+        <input type="text" id="skills" name="skills"><br>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <link rel="stylesheet" href="resume-styling.css">
+    <title>Generated Resume</title>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="left-column" id="personalInfo">
+            <!-- Personal Info will be dynamically inserted here -->
+        </div>
+        <div class="right-column" id="resumeDetails">
+            <!-- Resume Details will be dynamically inserted here -->
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const personalInfoContent = localStorage.getItem('personalInfoContent');
+            const projectContent = localStorage.getItem('projectContent');
+            const resumeDetailsContent = localStorage.getItem('resumeDetailsContent');
+            
+            const personalInfo = document.getElementById('personalInfo');
+            const resumeDetails = document.getElementById('resumeDetails');
+            
+            personalInfo.innerHTML = personalInfoContent;
+            resumeDetails.innerHTML = projectContent + resumeDetailsContent;
+        });
+    </script>
+</body>
+</html>
